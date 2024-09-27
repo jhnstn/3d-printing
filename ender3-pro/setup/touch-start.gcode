@@ -4,9 +4,11 @@ M140 S{material_bed_temperature_layer_0} ; Set Heat Bed temperature
 M117 Preheat e to 190 and Autohome
 M104 S190; start warming extruder to 160
 G28 ; Home all axes
+; start bed leveling
 M117 Load Bed Mesh
 G4 P1500 ; Dwell for 1 & 1/2 second
 M420 L0 S1 ; Loading the bed mesh
+; end bed leveing
 M117 Auto bed-level GO!
 G29 ; Auto bed-level (BL-Touch)
 G92 E0 ; Reset Extruder
